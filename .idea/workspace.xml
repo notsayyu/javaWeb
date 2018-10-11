@@ -2,14 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="296ddf57-3ddd-49aa-9c2e-ef14d1440ff3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/sydai/bean/Handler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/sydai/bean/Request.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/sydai/utils/ReflectionUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/sydai/utils/helper/BeanHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/sydai/utils/helper/ControllerHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/sydai/utils/helper/IocHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/sydai/DispatcherServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/sydai/bean/Data.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/sydai/bean/Param.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/sydai/bean/View.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/sydai/utils/CodecUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/sydai/utils/JsonUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/sydai/utils/StreamUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/sydai/utils/helper/HelperLoader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/sydai/utils/ClassUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/sydai/utils/ClassUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/sydai/utils/helper/ControllerHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/sydai/utils/helper/ControllerHelper.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -23,37 +26,39 @@
     <session id="-150648264">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
+          <entry key="project.closed" value="5" />
           <entry key="project.open.time.0" value="1" />
-          <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.1" value="2" />
           <entry key="project.open.time.2" value="1" />
-          <entry key="project.opened" value="3" />
+          <entry key="project.open.time.34" value="1" />
+          <entry key="project.open.time.42" value="1" />
+          <entry key="project.opened" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="6339" />
+          <entry key="java" value="10807" />
           <entry key="properties" value="30" />
           <entry key="xml" value="370" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="6339" />
+          <entry key="JAVA" value="10807" />
           <entry key="Properties" value="30" />
           <entry key="XML" value="370" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="32" />
+          <entry key="java" value="52" />
           <entry key="properties" value="1" />
           <entry key="txt" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="32" />
+          <entry key="JAVA" value="52" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="Properties" value="1" />
         </counts>
@@ -69,14 +74,6 @@
               <caret line="4" selection-start-line="4" selection-end-line="4" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#397#398#0" expanded="true" />
-                <element signature="e#433#434#0" expanded="true" />
-                <element signature="e#471#472#0" expanded="true" />
-                <element signature="e#505#506#0" expanded="true" />
-                <element signature="e#641#642#0" expanded="true" />
-                <element signature="e#701#702#0" expanded="true" />
-                <element signature="e#802#803#0" expanded="true" />
-                <element signature="e#864#865#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -97,14 +94,154 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/sydai/utils/helper/ControllerHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="567">
-              <caret line="27" column="37" selection-start-line="27" selection-start-column="37" selection-end-line="27" selection-end-column="37" />
+            <state relative-caret-position="1386">
+              <caret line="66" column="39" selection-start-line="66" selection-start-column="39" selection-end-line="66" selection-end-column="39" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#342#360#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/sydai/utils/ClassUtil.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="492">
+              <caret line="41" column="19" lean-forward="true" selection-start-line="41" selection-start-column="19" selection-end-line="41" selection-end-column="19" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#571#572#0" expanded="true" />
+                <element signature="e#640#641#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/sydai/utils/helper/HelperLoader.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="378">
+              <caret line="18" column="26" lean-forward="true" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/sydai/bean/Param.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="294">
+              <caret line="14" column="11" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#233#234#0" expanded="true" />
+                <element signature="e#273#274#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/sydai/bean/View.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="168">
+              <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/sydai/bean/Data.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="252">
+              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+              <folding>
+                <element signature="e#164#165#0" expanded="true" />
+                <element signature="e#198#199#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/sydai/utils/StreamUtil.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="321">
+              <caret line="19" column="25" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/sydai/utils/CodecUtil.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="426">
+              <caret line="31" column="7" lean-forward="true" selection-start-line="31" selection-start-column="7" selection-end-line="32" selection-end-column="47" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/sydai/utils/JsonUtil.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="21" column="13" lean-forward="true" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/sydai/DispatcherServlet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="384">
+              <caret line="40" column="17" lean-forward="true" selection-start-line="40" selection-start-column="17" selection-end-line="40" selection-end-column="17" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#2084#2100#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/sydai/utils/ReflectionUtil.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="546">
+              <caret line="39" column="29" lean-forward="true" selection-start-line="39" selection-start-column="29" selection-end-line="39" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/sydai/utils/StringUtil.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="231">
+              <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/sydai/configuration/annotation/Action.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="168">
+              <caret line="8" column="14" lean-forward="true" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -140,7 +277,6 @@
         <option value="$PROJECT_DIR$/src/main/java/config/ConfigConstant.java" />
         <option value="$PROJECT_DIR$/src/log4j.properties" />
         <option value="$PROJECT_DIR$/src/main/java/org/sydai/configuration/MyFileFilter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/sydai/utils/ClassUtil.java" />
         <option value="$PROJECT_DIR$/src/main/resources/log4j.properties" />
         <option value="$PROJECT_DIR$/src/main/java/org/sydai/configuration/annotation/Controller.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/sydai/configuration/annotation/Action.java" />
@@ -148,13 +284,22 @@
         <option value="$PROJECT_DIR$/src/main/java/org/sydai/configuration/annotation/Inject.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/sydai/utils/helper/ConfigHelper.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/sydai/utils/helper/ClassHelper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/sydai/utils/ReflectionUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/sydai/utils/helper/BeanHelper.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/sydai/utils/helper/IocHelper.java" />
         <option value="$PROJECT_DIR$/src/test/java/test.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/sydai/bean/Request.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/sydai/bean/Handler.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/sydai/utils/helper/ControllerHelper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/sydai/utils/helper/HelperLoader.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/sydai/bean/Param.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/sydai/bean/View.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/sydai/bean/Data.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/sydai/utils/StreamUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/sydai/utils/CodecUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/sydai/utils/JsonUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/sydai/DispatcherServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/sydai/utils/ReflectionUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/sydai/utils/ClassUtil.java" />
       </list>
     </option>
   </component>
@@ -164,8 +309,8 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="883" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="429" />
     <option name="width" value="1062" />
     <option name="height" value="1040" />
   </component>
@@ -177,7 +322,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -292,6 +436,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="AndroidView" />
     </panes>
@@ -299,7 +444,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1538292167403" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539244070279" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -323,26 +468,6 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
-    <configuration name="ClassUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.sydai.utils.ClassUtil" />
-      <module name="javaweb" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.sydai.utils.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.ClassUtil" />
-      </list>
-    </recent_temporary>
-  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -355,15 +480,18 @@
       <updated>1538122934934</updated>
       <workItem from="1538122937764" duration="5549000" />
       <workItem from="1538204784853" duration="13210000" />
-      <workItem from="1538274253844" duration="10314000" />
+      <workItem from="1538274253844" duration="10365000" />
+      <workItem from="1538712490706" duration="4035000" />
+      <workItem from="1539146261256" duration="12000" />
+      <workItem from="1539225275915" duration="10288000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29073000" />
+    <option name="totallyTimeSpent" value="43459000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Image Layers" order="0" />
@@ -371,12 +499,12 @@
       <window_info id="UI Designer" order="2" />
       <window_info id="Learn" order="3" />
       <window_info id="Capture Tool" order="4" />
-      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.13326226" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.21481876" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="0" weight="0.32899022" />
       <window_info anchor="bottom" id="FindBugs-IDEA" order="1" />
-      <window_info anchor="bottom" id="Terminal" order="2" sideWeight="0.4993742" weight="0.3281768" />
+      <window_info anchor="bottom" id="Terminal" order="2" sideWeight="0.4993742" weight="0.32790446" />
       <window_info anchor="bottom" id="Event Log" order="3" sideWeight="0.5006258" side_tool="true" weight="0.3256579" />
       <window_info anchor="bottom" id="Database Changes" order="4" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="5" />
@@ -403,12 +531,12 @@
       <window_info id="UI Designer" order="2" />
       <window_info id="Learn" order="3" />
       <window_info id="Capture Tool" order="4" />
-      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.37125748" />
+      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.251497" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="0" weight="0.32899022" />
       <window_info anchor="bottom" id="FindBugs-IDEA" order="1" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="2" sideWeight="0.4993742" visible="true" weight="0.3281768" />
+      <window_info anchor="bottom" id="Terminal" order="2" sideWeight="0.4993742" weight="0.32790446" />
       <window_info anchor="bottom" id="Event Log" order="3" sideWeight="0.5006258" side_tool="true" weight="0.3256579" />
       <window_info anchor="bottom" id="Database Changes" order="4" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="5" />
@@ -475,13 +603,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/lang/Class.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="118" column="19" selection-start-line="118" selection-start-column="19" selection-end-line="118" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/io/FileFilter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
@@ -507,9 +628,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
           <caret line="14" column="19" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -517,19 +635,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
           <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/sydai/utils/ClassUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2058">
-          <caret line="111" column="22" selection-start-line="111" selection-start-column="22" selection-end-line="111" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -537,9 +642,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
           <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -547,19 +649,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="231">
           <caret line="14" selection-start-line="14" selection-end-line="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/sydai/configuration/annotation/Action.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="18" column="19" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -567,9 +656,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="2" selection-start-column="2" selection-end-column="2" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -577,9 +663,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="13" column="15" selection-start-line="13" selection-start-column="15" selection-end-line="13" selection-end-column="15" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -597,26 +680,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/sydai/utils/StringUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/sydai/utils/helper/ConfigHelper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="588">
           <caret line="37" column="7" selection-start-line="37" selection-start-column="7" selection-end-line="37" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#396#397#0" expanded="true" />
-            <element signature="e#480#481#0" expanded="true" />
-            <element signature="e#555#556#0" expanded="true" />
-            <element signature="e#636#637#0" expanded="true" />
-            <element signature="e#714#715#0" expanded="true" />
-            <element signature="e#800#801#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -624,13 +691,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
           <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/lang/reflect/AccessibleObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="125" column="16" selection-start-line="125" selection-start-column="16" selection-end-line="125" selection-end-column="16" />
         </state>
       </provider>
     </entry>
@@ -648,34 +708,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/sydai/utils/ReflectionUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="15" column="37" lean-forward="true" selection-start-line="15" selection-start-column="37" selection-end-line="15" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/sydai/utils/helper/ClassHelper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="552">
           <caret line="61" column="44" lean-forward="true" selection-start-line="61" selection-start-column="44" selection-end-line="61" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1486#1496#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -683,13 +719,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="363">
           <caret line="20" column="55" lean-forward="true" selection-start-line="20" selection-start-column="55" selection-end-line="20" selection-end-column="55" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#272#290#0" expanded="true" />
-            <element signature="e#729#730#0" expanded="true" />
-            <element signature="e#759#760#0" expanded="true" />
-            <element signature="e#799#829#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -697,9 +726,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="325">
           <caret line="27" column="29" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -709,14 +735,6 @@
           <caret line="4" selection-start-line="4" selection-end-line="4" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#397#398#0" expanded="true" />
-            <element signature="e#433#434#0" expanded="true" />
-            <element signature="e#471#472#0" expanded="true" />
-            <element signature="e#505#506#0" expanded="true" />
-            <element signature="e#641#642#0" expanded="true" />
-            <element signature="e#701#702#0" expanded="true" />
-            <element signature="e#802#803#0" expanded="true" />
-            <element signature="e#864#865#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -736,11 +754,176 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/sydai/utils/helper/ControllerHelper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
-          <caret line="27" column="37" selection-start-line="27" selection-start-column="37" selection-end-line="27" selection-end-column="37" />
+        <state relative-caret-position="1386">
+          <caret line="66" column="39" selection-start-line="66" selection-start-column="39" selection-end-line="66" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#342#360#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/sydai/bean/Data.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+          <folding>
+            <element signature="e#164#165#0" expanded="true" />
+            <element signature="e#198#199#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/sydai/bean/View.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/io/UnsupportedEncodingException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="32" column="13" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/net/URLEncoder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1860">
+          <caret line="169" column="28" selection-start-line="169" selection-start-column="28" selection-end-line="169" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/net/URLDecoder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="80" column="48" lean-forward="true" selection-start-line="80" selection-start-column="48" selection-end-line="80" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/sydai/utils/JsonUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="13" lean-forward="true" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/sydai/utils/CodecUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="426">
+          <caret line="31" column="7" lean-forward="true" selection-start-line="31" selection-start-column="7" selection-end-line="32" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/sydai/utils/StreamUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="321">
+          <caret line="19" column="25" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/sydai/utils/StringUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/sydai/bean/Param.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="14" column="11" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#233#234#0" expanded="true" />
+            <element signature="e#273#274#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/lang/reflect/Method.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="563">
+          <caret line="496" column="9" lean-forward="true" selection-start-line="496" selection-start-column="9" selection-end-line="496" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/sydai/utils/ReflectionUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="546">
+          <caret line="39" column="29" lean-forward="true" selection-start-line="39" selection-start-column="29" selection-end-line="39" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/lang/reflect/AccessibleObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="930">
+          <caret line="189" column="19" selection-start-line="189" selection-start-column="19" selection-end-line="189" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/sydai/configuration/annotation/Action.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="8" column="14" lean-forward="true" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/sydai/DispatcherServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="40" column="17" lean-forward="true" selection-start-line="40" selection-start-column="17" selection-end-line="40" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2084#2100#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/sydai/utils/helper/HelperLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="18" column="26" lean-forward="true" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/lang/Class.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6027">
+          <caret line="354" column="38" selection-start-line="351" selection-start-column="4" selection-end-line="354" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/sydai/utils/ClassUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="492">
+          <caret line="41" column="19" lean-forward="true" selection-start-line="41" selection-start-column="19" selection-end-line="41" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#571#572#0" expanded="true" />
+            <element signature="e#640#641#0" expanded="true" />
           </folding>
         </state>
       </provider>
