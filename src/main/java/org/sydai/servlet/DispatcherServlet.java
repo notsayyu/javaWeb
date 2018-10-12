@@ -1,4 +1,4 @@
-package org.sydai;
+package org.sydai.servlet;
 
 import com.sun.deploy.util.ArrayUtil;
 import org.apache.commons.lang3.ArrayUtils;
